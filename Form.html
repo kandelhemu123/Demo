@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        form {
+            width: 70%;
+            margin: auto;
+            margin-top: 25px;
+            border: 3px solid blueviolet;
+            padding: 5px;
+        }
+        
+        label {
+            display: inline-block;
+            width: 25%;
+        }
+        
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="email"],
+        input[type="Date"],
+        input[type="search"],
+        textarea,
+        .custom_div {
+            height: 30px;
+            width: 73%;
+            margin-bottom: 10px;
+        }
+        
+        textarea {
+            height: 80px;
+        }
+        
+        .custom_div {
+            width: 73%;
+            display: inline-flex;
+        }
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-bottom: 13px;
+        }
+        
+        .custom_button {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .button-style {
+            background-color: blue;
+            color: white;
+            height: 30px;
+            border-radius: 15px;
+        }
+        
+        .
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="form1.html" method="get/post" target="_self">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="enter your username">
+
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="enter your email">
+
+        <label for="password">Password:</label>
+        <input type="password" id="" placeholder="enter your password">
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="enter your age">
+        <label for="dob">Date of Birth:</label>
+        <input type="date">
+
+        <label for="search">Search:</label>
+        <input type="search" id="" placeholder="search heare">
+
+        <!-- RADIO BUTTON -->
+        <label for="">Gender:</label>
+        <div class="custom_div">
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female"> Female</label>
+        </div>
+
+
+        <!-- checkbox -->
+        <label for="">Skill:</label>
+
+        <div class="custom_div">
+            <input type="checkbox" name="skill" id="html" value="html">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" name="skill" id="java" value="java">
+            <label for="java">java</label>
+
+            <input type="checkbox" name="skill" id="css" value="css">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" name="skill" id="c" value="c">
+            <label for="c">c</label>
+
+            <input type="checkbox" name="skill" id="php" value="php">
+            <label for="php">php</label>
+        </div>
+
+
+        <label for="">Description:</label>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
+
+
+
+        <!-- button style in using php -->
+        <div class="custom_button">
+
+            <input type="submit" value="Submit" class="button-style">
+            <input type="reset" value="Reset" class="button-style">
+        </div>
+    </form>
+
+
+
+
+
+</body>
+
+</html>

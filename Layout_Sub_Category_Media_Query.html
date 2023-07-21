@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Sub-Category Media Query</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            /* height: 10vh; */
+            /* 
+            vh -> view port height
+            vw -> view port width
+             */
+            width: 100%;
+            background-color: aqua;
+            /* padding: 15px; */
+        }
+        
+        .main {
+            height: 80vh;
+            background-color: blueviolet;
+            display: flex;
+        }
+        
+        .footer {
+            height: 10vh;
+            background-color: blue;
+        }
+        
+        .left {
+            width: 25vw;
+            background-color: burlywood;
+        }
+        
+        .right {
+            width: 75vw;
+            /* background-color: brown; */
+        }
+        
+        .right-top {
+            height: 50%;
+            background-color: cadetblue;
+        }
+        
+        .right-bottom {
+            display: flex;
+            height: 50%;
+        }
+        
+        .right-bottom-left {
+            width: 50%;
+            background-color: yellowgreen;
+        }
+        
+        .header>ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 15px;
+        }
+        /* ul li:hover {
+            font-weight: bold;
+            color: #c40b0b; }*/
+        
+        .sub-category {
+            display: none;
+            position: absolute;
+            list-style: none;
+            padding-left: 0;
+            background-color: aqua;
+        }
+        
+        .sub-category li {
+            padding: 5px 10px;
+        }
+        
+        .sub-category li:hover {
+            background-color: goldenrod;
+        }
+        
+        ul li:hover .sub-category {
+            display: block;
+        }
+        
+        .menu-item li {
+            position: relative;
+        }
+        
+        .sub-sub-category {
+            padding: 0;
+            display: none;
+            left: 100%;
+            top: 0;
+            position: absolute;
+            list-style: none;
+            background-color: darkviolet;
+        }
+        
+        .sub-category li:hover .sub-sub-category {
+            display: block;
+        }
+        
+        .sub-sub-sub-category {
+            position: absolute;
+            list-style: none;
+            padding: 0;
+            background-color: lawngreen;
+            top: 0;
+            display: none;
+            left: 100%;
+        }
+        
+        .sub-sub-category li:hover .sub-sub-sub-category {
+            display: block;
+        }
+        
+        .sub-sub-sub-category {
+            width: 100px;
+            text-align: center;
+        }
+        
+        .small-screen {
+            display: none;
+        }
+        
+        @media screen and (max-width:600px) {
+            .header>ul {
+                display: none;
+            }
+            .small-screen {
+                display: block;
+                padding: 10px;
+                width: 100%;
+                text-align: center;
+                background-color: blue;
+                color: white;
+            }
+            .main {
+                flex-direction: column;
+            }
+            .left {
+                width: 100%;
+                height: 20vh;
+            }
+            .right {
+                width: 100%;
+            }
+            .right-top {
+                width: 100%;
+                height: 20vh;
+            }
+            .right-bottom {
+                width: 100%;
+                flex-direction: column;
+            }
+            .right-bottom-left {
+                width: 100%;
+                height: 20vh;
+                /* background-color: blueviolet; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <select name="" id="" class="small-screen">
+            <option value="">Home</option>
+            <option value="">Category</option>
+            <option value="">Blogs</option>
+            <option value="">Contact</option>
+            <option value="">About</option>
+            <option value="">Map</option>
+        </select>
+        <ul class="menu-item">
+            <li>Home</li>
+            <li>Category
+                <ul class="sub-category">
+                    <li>Laptops
+                        <ul class="sub-sub-category">
+                            <li>APPLE
+                                <ul class="sub-sub-sub-category">
+                                    <li>13 pro</li>
+                                    <li>12 pro</li>
+                                    <li>11 pro</li>
+                                    <li>10 pro</li>
+                                </ul>
+                            </li>
+                            <li>DELL</li>
+                            <li>ACER</li>
+                            <li>LENOVO</li>
+                            <li>ASUSS</li>
+                        </ul>
+                    </li>
+                    <li>Mobile
+                        <ul class="sub-sub-category">
+                            <li>APPLE</li>
+                            <li>SAMSUNG</li>
+                            <li>REALMI</li>
+                            <li>RREDMI</li>
+                            <li>INFINIX</li>
+                        </ul>
+                    </li>
+                    <li>camera
+                        <ul class="sub-sub-category">
+                            <li>CANON</li>
+                            <li>SAMSUNG</li>
+                            <li>NIKON</li>
+                            <li>SONY</li>
+                            <li>PANASONICX</li>
+                        </ul>
+                    </li>
+                    <li>Desktop</li>
+                    <li>Telivision</li>
+                </ul>
+            </li>
+            <li>Blogs</li>
+            <li>Contact</li>
+            <li>About</li>
+            <li>Map</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="left">Left sidebar</div>
+        <div class="right">
+            <div class="right-top">right top</div>
+            <div class="right-bottom">
+                <div class="right-bottom-left">right bottom left</div>
+                <div class="right-bottom-right">right bottom right</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">Footer</div>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .image-slider {
+            margin: auto;
+            width: 70%;
+            height: 500px;
+            background-color: blue;
+            position: relative;
+        }
+        
+        .image-area {
+            width: 100%;
+            height: 500px;
+        }
+        
+        .left {
+            font-size: 50px;
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            color: aqua;
+            background-color: red;
+            cursor: crosshair;
+        }
+        
+        .right {
+            font-size: 50px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            color: brown;
+            background-color: black;
+            cursor: pointer;
+        }
+        
+        .left:hover {
+            color: antiquewhite;
+            background-color: blue;
+        }
+        
+        .right:hover {
+            color: antiquewhite;
+            background-color: blue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="image-slider">
+        <img src="image.jfif" alt="" class="image-area">
+        <button class="left">&lt;</button>
+        <button class="right">&gt;</button>
+    </div>
+</body>
+
+</html>

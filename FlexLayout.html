@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            background-color: aqua;
+            display: flex;
+            flex-wrap: wrap;
+            height: 800px;
+            flex-direction: column;
+            /* justify-content: space-evenly;
+            align-content: space-between; */
+        }
+        
+        .div1 {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="div1">1</div>
+        <div class="div1">2</div>
+        <div class="div1">3</div>
+        <div class="div1">4</div>
+        <div class="div1">5</div>
+        <div class="div1">6</div>
+        <div class="div1">7</div>
+        <div class="div1">8</div>
+        <div class="div1">9</div>
+        <div class="div1">10</div>
+    </div>
+
+</body>
+
+</html>
